@@ -87,4 +87,18 @@ module "resource_group" {
 | `list(string)` | An ordered collection of text values | `["10.0.1.0/24", "10.0.2.0/24"]` | Subnet address prefixes |
 | `map(string)` | Key-value pairs where every value is text | `{ environment = "Dev", owner = "Lucky" }` | Resource tags |
 
-- The input argument names in the root module’s module block must match the variable names declared in the child module.    
+
+| Term | Definition | Example |
+| --- | --- | --- |
+| Block | A section of Terraform code that defines something, such as a resource, variable, or output. | `variable "rgname" { type = string }` |
+| Label | A name or identifier following the block type. | `"rgname"` in `variable "rgname"` |
+| Attribute | A property of an object or resource. | `name` in `azurerm_resource_group.rg.name` |
+
+
+- Block: A section of Terraform code that defines something, such as a resource, variable, or output.
+- Label: A name or identifier following the block type, such as "rgname" in variable "rgname".
+- Attribute: A property of an object or resource, such as name, id, or location.
+
+- Use consistent names for child module input variables, output blocks, and root module variables that represent the same value to improve readability and avoid confusion.
+- The input argument names in the root module’s module block must match the variable names declared in the child module.
+- Its better to write the output block in the main.tf of child module whether we use it or not
