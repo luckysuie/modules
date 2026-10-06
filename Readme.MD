@@ -86,3 +86,5 @@ module "resource_group" {
 | `string` | One text value | `"my-resource-group"` | Resource group name, location |
 | `list(string)` | An ordered collection of text values | `["10.0.1.0/24", "10.0.2.0/24"]` | Subnet address prefixes |
 | `map(string)` | Key-value pairs where every value is text | `{ environment = "Dev", owner = "Lucky" }` | Resource tags |
+
+- The input argument names in the root module’s module block must match the variable names declared in the child module.    
