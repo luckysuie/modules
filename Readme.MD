@@ -80,6 +80,7 @@ module "resource_group" {
 
 ### Learnings
 - Differences between string, list(string) and map(sting) in variables.tf file
+
 | Type | Meaning | Example | Terraform Use |
 | --- | --- | --- | --- |
 | `string` | One text value | `"my-resource-group"` | Resource group name, location |
