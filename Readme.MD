@@ -77,3 +77,11 @@ module "resource_group" {
     - Azure Load balancer
     - MS sql database
     - Azure kubernetes Cluster
+
+### Learnings
+- Differences between string, list(string) and map(sting) in variables.tf file
+| Type | Meaning | Example | Terraform Use |
+| --- | --- | --- | --- |
+| `string` | One text value | `"my-resource-group"` | Resource group name, location |
+| `list(string)` | An ordered collection of text values | `["10.0.1.0/24", "10.0.2.0/24"]` | Subnet address prefixes |
+| `map(string)` | Key-value pairs where every value is text | `{ environment = "Dev", owner = "Lucky" }` | Resource tags |
