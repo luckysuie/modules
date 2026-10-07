@@ -10,5 +10,5 @@ resource "azurerm_container_registry" "acr" {
 
 output "acrname" {
   description = "The ACR name is"
-  value = azurerm_container_registry.acr.name
+  value       = azurerm_container_registry.acr.name
 }
